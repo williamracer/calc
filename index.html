@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Calculadora de Data por Dias Úteis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CALCULADORA PARA CRONOGRAMA</h1>
+
+        <label for="dataInicial">Data Inicial:</label>
+        <input type="text" id="dataInicial" class="flatpickr" placeholder="SELECIONE UMA DATA NO CALENDÁRIO ABAIXO">
+
+        <div class="cmps">
+        <div id="campos">
+
+        <span id="mensagemHorasPorDia" class="mensagem">&#9888; Selecione uma data no calendário antes de prosseguir</span>
+
+        <div class="cmpsEnt">
+        <label for="cargaHoraria">Carga Horária Total (em horas):</label>
+        <input type="number" id="cargaHoraria" disabled>
+        </div>
+
+        <span id="mensagemCargaHoraria" class="mensagem">&#9888; Selecione uma data no calendário antes de prosseguir</span>
+
+        <div class="cmpsEnt">
+        <label for="horasPorDia">Quantidade de Horas por Aula:</label>
+        <input type="number" id="horasPorDia" disabled>
+        </div>
+
+        </div>
+
+        <div id="diasUteisCheckbox">
+            <p>Selecione os dias úteis da semana:</p>
+            <label><input type="checkbox" name="diasUteis" value="0">Domingo</label>
+            <label><input type="checkbox" name="diasUteis" value="1">Segunda-feira</label>
+            <label><input type="checkbox" name="diasUteis" value="2">Terça-feira</label>
+            <label><input type="checkbox" name="diasUteis" value="3">Quarta-feira</label>
+            <label><input type="checkbox" name="diasUteis" value="4">Quinta-feira</label>
+            <label><input type="checkbox" name="diasUteis" value="5">Sexta-feira</label>
+            <label><input type="checkbox" name="diasUteis" value="6">Sábado</label>
+        </div>
+        </div>
+
+        <button onclick="calcularDiasUteis()">REALIZAR OS CÁLCULOS</button>
+
+        <h2 id="diasUteis"></h2>
+
+        <h2 id="dataFinal" style="display: none;"></h2>
+
+        <div id="relatorio" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
